@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "DEBUG=admin,middle,app,Attendance:server,fcm  nodemon ./bin/www"
+        "start": "DEBUG=admin,middle,app,Attendance:server,fcm,Index  nodemon ./bin/www"
     },
     "repository": {
         "type": "git",

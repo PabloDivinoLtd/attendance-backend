@@ -6,8 +6,8 @@ var _ = require('underscore');
 constant = require('../../constant');
 var superAdminStatus = 10;
 
-router.get('/a1', (req, res, next) => {
-    res.json({ "Admin-Index": true });
+router.get('/login', (req, res, next) => {
+    res.json({ "Login": true });
 });
-router.use('/auth', require('./auth'));
+
 module.exports = router;
