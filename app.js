@@ -6,12 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var helmet = require('helmet');
 var cors = require('cors');
-var debug = require('debug')('app');
 var token = require('./middleware/token')
 var router = require('./routes/index');
 var config = require('./config')()
+var debug = require('debug')('app');
 var app = express();
-
 app.use(cors())
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -19,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
-app.use(token);
+// app.use(token);
 app.use('/', router);
 
 if (!debug.enable) {
